@@ -1,0 +1,17 @@
+.spc{
+  background: gray;
+}
+.spc img{
+  border-radius: 5px;
+
+}
+.spc .containe{
+  padding-left: 20px;
+}
+.spc .center{
+ color: black;
+ padding: 0;
+ margin: 0;
+ text-align: center;
+ border: 10px;
+}
