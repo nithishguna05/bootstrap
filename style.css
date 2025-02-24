@@ -125,7 +125,6 @@ section{
     justify-content: center;
     flex-direction: column;
     background: #0ce170 ;
-    /* opacity: 0.9; */
 }
 .ho .content{
     z-index: 888;
@@ -136,7 +135,7 @@ section{
 }
 .ho .content.active{
     display: block;
-    /* top: 110%; */
+    top: 110%;
 }
 .ho .content h1{
     font-size: 4em;
@@ -149,6 +148,7 @@ section{
 .ho .content p{
     margin-bottom: 65px;
     font-size: 17px;
+    display: block;
 }
 .ho .content a{
     background: #ffa500;
@@ -208,43 +208,28 @@ section{
     transition: 2s ease;
     transition-property: clip-path;
 }
+
 .formscontainer{
     z-index: 888;
-    position: relative;
-    top: 120%;
-    left: 1400px;
-    width: 40rem;
-    height: 44rem;
-    background: #fff;
+    position: absolute;
+    top: 10%;
+    right: -110%;
+    width: 30rem;
+    height: 70rem;
+    /* background: #fff; */
     border-radius: .5rem;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: none;
     align-items: center;
-    box-shadow: 1px 0 6px black;
+    /* box-shadow: 1px 0 6px black; */
 }
 .formscontainer.active{
-    left: 850px;
-    display: flex;
-    /* position: relative; */
+    right: 8rem;
+    display: flex; 
 }
-/* .formscontainer{
-    z-index: 888;
-    position: relative;
-    display: none;
-    top: 110%;
-    right: -120%;
-    
-}
-.formscontainer.active{
-    top: 110%;
-    left: 120px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-} */
 .formscontainer form{
-    margin-top: 8rem;
-    padding: 2rem;
+    margin-top: 0;
+    padding: 2rem ;
     width: 40rem;
     background-color: #fff;
     box-shadow: 1px 0 6px black;
@@ -375,6 +360,11 @@ section{
     .header .navbar .login{
         text-align: center;
     }
+    .ho .content p{
+    
+        display: none;
+    }
+
 
 }
 @media (max-width:450px){
@@ -382,6 +372,7 @@ section{
     html{
         font-size: 50%;
     }
+    
 
 }
 
@@ -391,23 +382,23 @@ section{
 
 /* Home start */
 .home{
-    width: 95%;
+    width: 100%;
     height: 400px;
     padding: 20px;
-    margin: 30px;
+    margin-top: 30px;
     height: 60vh;
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url(images/home.jpeg);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 
 }
-.home:hover{
+/* .home:hover{
     opacity: 0.9;
     transform: scale(1.1);
     padding-top: 20px;
     transition: 0.3s ease;
-}
+} */
 .home .content{
     text-align: center;
     padding-top: 200px;
@@ -473,6 +464,8 @@ section{
     }
 }
 @media (max-width:450px){
+}
+    
     .home .content h5{
         font-size: 25px;
     }
@@ -482,7 +475,11 @@ section{
     .home .content p{
         font-size: 13px;
     }
-}
+    .home .content{
+        text-align: center;
+        padding-top: 150px;
+    }
+
 /* Home end*/
 
 
@@ -611,6 +608,7 @@ section{
 .package {
      padding-block: 60px; 
      background: #f9f9f9;
+     display: block;
     }
 
 .package-list {
@@ -656,7 +654,9 @@ section{
   border-radius: 50px;
 }
 
-.card-meta-item { position: relative; }
+.card-meta-item { 
+    position: relative; 
+}
 
 .card-meta-item:not(:last-child)::after {
   content: "";
@@ -699,7 +699,9 @@ section{
   margin-bottom: 10px;
 }
 
-.package-card .card-price .reviews { font-size: 14px; }
+.package-card .card-price .reviews { 
+    font-size: 14px;
+}
 
 .package-card .card-rating {
   display: flex;
@@ -709,7 +711,9 @@ section{
   font-size: 14px;
 }
 
-.package-card .card-rating ion-icon:last-child { color: hsl(0, 0%, 80%); }
+.package-card .card-rating ion-icon:last-child { 
+    color: hsl(0, 0%, 80%); 
+}
 
 .package-card .price {
   font-size: calc(18px + 1.6vw);
@@ -763,11 +767,17 @@ section{
 
 
 @media (min-width: 992px) {
+    
 
-  .meta-box { --fs-8: 13px; }
+  .meta-box { font-size:  13px; }
 
   .meta-box > ion-icon { font-size: 15px; }
 
+}
+@media (max-width: 600px){
+    .package {
+        display: none;
+       }
 }
 
 
@@ -1003,6 +1013,7 @@ section{
     }
     .containe .contactform{
         margin-bottom: 40px;
+        width: 100%;
     }
     .containe .contactinfo{
         width: 100%;
